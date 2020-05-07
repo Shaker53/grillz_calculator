@@ -1,6 +1,7 @@
 from .business_logic import calculate_income_and_expenses
 from ui.config import table_on_page
 from ui.forms import Window
+from exel import xls_export
 
 
 class GrillzApp(Window):
@@ -17,6 +18,11 @@ class GrillzApp(Window):
         self.all_params = [inputs, income_and_expenses]
         table_on_page(self.all_params, self.tableWidget)
         self.stackedWidget.setCurrentIndex(1)
+
+    def click_on_save_button(self):
+        xls_export.save_order(self.all_params)
+        self.button_save.setEnabled(False)
+        show_msg_exelsaved()
 
 
 def reading_inputs(self):
