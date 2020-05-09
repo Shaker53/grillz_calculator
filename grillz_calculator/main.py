@@ -1,4 +1,4 @@
-from ui.messages import show_msg_exelsaved
+from ui.messages import show_msg_exelsaved, show_msg_wrong_input
 from .business_logic import calculate_income_and_expenses
 from ui.config import table_on_page
 from ui.forms import Window
@@ -13,8 +13,12 @@ class GrillzApp(Window):
 
     def click_on_calculate_button(self):
         inputs = reading_inputs(self)
-        inputs = prepare_inputs(inputs)
+        result_of_check = checking_inputs(inputs)
+        if result_of_check == 'wrong_input':
+            show_msg_wrong_input()
+            return
 
+        inputs = prepare_inputs(inputs)
         income_and_expenses = calculate_income_and_expenses(inputs)
         self.all_params = [inputs, income_and_expenses]
         table_on_page(self.all_params, self.tableWidget)
@@ -44,6 +48,15 @@ def reading_inputs(self):
               first_payment, difficult_sum, jaws, jaws_text, n_of_teeth, spraying, add_costs]
 
     return inputs
+
+
+def checking_inputs(inputs):
+    for idx in [1, 4, 5, 6, 9, 10, 11]:
+        if inputs[idx] != '':
+            try:
+                float(inputs[idx])
+            except:
+                return 'wrong_input'
 
 
 def prepare_inputs(inputs):
