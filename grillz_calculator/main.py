@@ -1,4 +1,4 @@
-from ui.messages import show_msg_exelsaved, show_msg_wrong_input
+from ui.messages import show_msg_exelsaved, show_msg_wrong_input, show_msg_not_all_important_params
 from .business_logic import calculate_income_and_expenses
 from ui.config import table_on_page
 from ui.forms import Window
@@ -14,9 +14,14 @@ class GrillzApp(Window):
     def click_on_calculate_button(self):
         inputs = reading_inputs(self)
         result_of_check = checking_inputs(inputs)
+
         if result_of_check == 'wrong_input':
             show_msg_wrong_input()
             return
+        elif result_of_check == 'not_all_important_param':
+            msg_answer = show_msg_not_all_important_params()
+            if msg_answer == 'back_button_pushed':
+                return
 
         inputs = prepare_inputs(inputs)
         income_and_expenses = calculate_income_and_expenses(inputs)
@@ -57,6 +62,9 @@ def checking_inputs(inputs):
                 float(inputs[idx])
             except:
                 return 'wrong_input'
+
+    if any(inputs[idx] for idx in [0, 1, 4, 9]) == '':
+        return 'not_all_important_param'
 
 
 def prepare_inputs(inputs):
