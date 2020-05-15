@@ -35,8 +35,8 @@ On GitHub click "Clone or download" and then "Download ZIP".
 Unzip downloaded archive, go to extracted folder and
 run setup.py via python
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/back.png" 
-  title="Download button is highlighted" alt="ZIP" width="600" height="369"/>
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png" 
+  title="Download button is highlighted" alt="Download ZIP" width="600" height="369"/>
 </p>
 
 ```
@@ -50,14 +50,28 @@ python3 setup.py
 ## How to use
 
 1.  Enter all order information and press **"Calculate"**
-![calculate](https://clck.ru/NUQ5J "Calculate button is highlighted")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/calculate.png" 
+  title="Calculate button is highlighted" alt="Calculate" width="600" height="369"/>
+</p>
 2.  Check all the costs and income
-![check](https://clck.ru/NURCL "You can see most of all order details")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/check.png" 
+  title="You can see most of all order details" alt="check" width="600" height="369"/>
+</p>
 3. To save order information press **"Save"**; 
 program will create .xls file in the root directory of the 
 project and will put all the information into it
-![save](https://clck.ru/NURpg "Save button is highlighted")
-![save_ok](https://clck.ru/NUS7c "When order is saved, you will see a notification")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/save.png" 
+  title="Save button is highlighted" alt="save" width="600" height="369"/>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/save_ok.png" 
+  title="When order is saved, you will see a notification" alt="save_ok" width="600" height="369"/>
+</p>
+
 4. You can open the file with any EXEL-like app 
 (Microsoft Excel, LibreOffice, OpenOffice, etc.)
 ![xls1](https://clck.ru/NUUX6 "You can use it like any other Exel table")
