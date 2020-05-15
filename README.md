@@ -35,7 +35,7 @@ On GitHub click "Clone or download" and then "Download ZIP".
 Unzip downloaded archive, go to extracted folder and
 run setup.py via python
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/back.png" 
   title="Download button is highlighted" alt="ZIP"/>
 </p>
 
