@@ -55,6 +55,7 @@ python3 setup.py
   <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/calculate.png" 
   title="Calculate button is highlighted" alt="Calculate_button_image" width="600" height="369"/>
 </p>
+
 2.  Check all the costs and income
 
 <p align="center">
