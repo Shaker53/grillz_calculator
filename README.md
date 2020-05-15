@@ -19,7 +19,7 @@ To run this program, you need to be installed on your PC:
 Use "git clone" to copy repository to your PC and then 
 in the project directory run setup.py via python
 
-``` bash
+```
 # Makes your own copy of repository
 git clone https://github.com/Shaker53/grillz_calcuator.git
 
@@ -34,9 +34,10 @@ python3 setup.py
 On GitHub click "Clone or download" and then "Download ZIP".
 Unzip downloaded archive, go to extracted folder and
 run setup.py via python
+
 ![Download ZIP](https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png "Download button is highlighted")
 
-``` bash
+```
 # Goes to the project directory. Plese put the directory path instead "..." !
 cd .../grillz_calcuator
 
