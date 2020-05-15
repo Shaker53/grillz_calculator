@@ -50,18 +50,22 @@ python3 setup.py
 ## How to use
 
 1.  Enter all order information and press **"Calculate"**
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/calculate.png" 
   title="Calculate button is highlighted" alt="Calculate_button_image" width="600" height="369"/>
 </p>
 2.  Check all the costs and income
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/check.png" 
   title="You can see most of all order details" alt="Check_image" width="600" height="369"/>
 </p>
+
 3. To save order information press **"Save"**; 
 program will create .xls file in the root directory of the 
 project and will put all the information into it
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/save.png" 
   title="Save button is highlighted" alt="Save_button_image" width="600" height="369"/>
@@ -74,6 +78,7 @@ project and will put all the information into it
 
 4. You can open the file with any EXEL-like app 
 (Microsoft Excel, LibreOffice, OpenOffice, etc.)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/xls1.png" 
   title="You can use it like any other Exel table" alt="xls_image_1" width="600" height="369"/>
