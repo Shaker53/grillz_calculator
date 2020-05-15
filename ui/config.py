@@ -17,7 +17,7 @@ bigfont = Font(14)
 mainfont = Font()
 littlefont = Font(11)
 
-window_title = QCoreApplication.translate('window', 'GRILLZ TURBOCALCULATOR')
+window_title = QCoreApplication.translate('window', 'GRILLZ CALCULATOR')
 
 table_rows = 10
 table_columns = 5
@@ -164,12 +164,12 @@ def table_on_page(all_params, tableWidget):
         (9, 3): ['---------', ' Напыление'],
         (9, 4): ['---------', str(spraying_sum) + ' р.']
     }
-    for i in range(10):
-        for j in range(5):
-            item = QTableWidgetItem(table_information[(i, j)][1])
+    for row in range(10):
+        for col in range(5):
+            item = QTableWidgetItem(table_information[(row, col)][1])
             item.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
             item.setFont(mainfont)
-            type_ = table_information[(i, j)][0]
+            type_ = table_information[(row, col)][0]
             if type_ == 'separator':
                 brush = QBrush(colors['table_separators'])
                 brush.setStyle(Qt.Dense5Pattern)
@@ -178,4 +178,4 @@ def table_on_page(all_params, tableWidget):
                 brush = QBrush(colors['table_main_items'])
                 brush.setStyle(Qt.Dense5Pattern)
                 item.setBackground(brush)
-            tableWidget.setItem(i, j, item)
+            tableWidget.setItem(row, col, item)
