@@ -1,4 +1,4 @@
-![first release](https://img.shields.io/badge/release-v1.0-brightgreen.svg)
+![first release](https://img.shields.io/badge/release-v1.0-brightgreen.svg#alignright "")
 
 ## About Grillz calculator
 **Grillz calculator** is a program for calculation and 
@@ -34,8 +34,10 @@ python3 setup.py
 On GitHub click "Clone or download" and then "Download ZIP".
 Unzip downloaded archive, go to extracted folder and
 run setup.py via python
-
-![Download ZIP](https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png "Download button is highlighted")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png" 
+  title="Download button is highlighted" alt="ZIP"/>
+</p>
 
 ```
 # Goes to the project directory. Plese put the directory path instead "..." !
