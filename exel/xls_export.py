@@ -19,30 +19,30 @@ def save_order(all_params):
     except FileNotFoundError:
         wb = Workbook()
         worksheet = wb.add_sheet('zakazy')
-        i = 0
+        col_number = 0
         for label in config.table_labels:
-            worksheet.write(0, i, label)
-            i += 1
+            worksheet.write(0, col_number, label)
+            col_number += 1
         wb.save('zakazy.xls')
         file = open_workbook('zakazy.xls', formatting_info=True)
     sheet = file.sheet_by_index(0)
     table = []
-    for m in range(len(sheet.col(0))):
+    for col_number_ in range(len(sheet.col(0))):
         my_row = []
-        for n in range(len(sheet.row(m))):
-            my_row.append(sheet.row(m)[n].value)
+        for row_number_ in range(len(sheet.row(col_number_))):
+            my_row.append(sheet.row(col_number_)[row_number_].value)
         table.append(my_row)
     table.append(for_export)
     wb = Workbook()
     worksheet = wb.add_sheet('zakazy')
-    j = 0
+    row_number__ = 0
     for row in table:
-        k = 0
+        col_number__ = 0
         for element in row:
-            worksheet.write(j, k, element)
-            k += 1
-        j += 1
+            worksheet.write(row_number__, col_number__, element)
+            col_number__ += 1
+        row_number__ += 1
 
-    for i in config.numbers_of_wide_cols:
-        worksheet.col(i).width = 256 * 20
+    for number_of_wide_col in config.numbers_of_wide_cols:
+        worksheet.col(number_of_wide_col).width = 256 * 20
     wb.save('zakazy.xls')

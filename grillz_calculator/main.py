@@ -4,6 +4,11 @@ from ui.config import table_on_page
 from ui.forms import Window
 from exel import xls_export
 
+ONLY_NUMERAL_INPUTS_INDEXES = [1, 4, 5, 6, 9, 10, 11]
+IMPORTANT_INPUTS_INDEXES = [0, 1, 4, 9]
+ALL_INPUTS_EXCEPT_CLIENT_NAME_INDEXES = range(1, 12)
+JAWS_INPUT_INDEX = 7
+
 
 class GrillzApp(Window):
     def __init__(self):
@@ -18,7 +23,7 @@ class GrillzApp(Window):
         if result_of_check == 'wrong_input':
             show_msg_wrong_input()
             return
-        elif result_of_check == 'not_all_important_param':
+        elif result_of_check == 'not_all_important_params':
             msg_answer = show_msg_not_all_important_params()
             if msg_answer == 'back_button_pushed':
                 return
@@ -56,23 +61,23 @@ def reading_inputs(self):
 
 
 def checking_inputs(inputs):
-    for idx in [1, 4, 5, 6, 9, 10, 11]:
+    for idx in ONLY_NUMERAL_INPUTS_INDEXES:
         if inputs[idx] != '':
             try:
                 float(inputs[idx])
             except:
                 return 'wrong_input'
 
-    if any(inputs[idx] for idx in [0, 1, 4, 9]) == '':
-        return 'not_all_important_param'
+    if any(inputs[idx] for idx in IMPORTANT_INPUTS_INDEXES) == '':
+        return 'not_all_important_params'
 
 
 def prepare_inputs(inputs):
-    for idx in range(1, len(inputs)):
+    for idx in ALL_INPUTS_EXCEPT_CLIENT_NAME_INDEXES:
         if inputs[idx] == '':
             inputs[idx] = 0
 
-    if inputs[7] == 0:
-        inputs[7] = 1
+    if inputs[JAWS_INPUT_INDEX] == 0:
+        inputs[JAWS_INPUT_INDEX] = 1
 
     return inputs
