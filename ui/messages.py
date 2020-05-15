@@ -7,7 +7,7 @@ def show_msg_not_all_important_params():
     question_msg = QtWidgets.QMessageBox()
     question_msg.setIcon(QtWidgets.QMessageBox.Information)
     question_msg.setWindowTitle(config.items_text['msg_not_all_important_params_window_title'])
-    question_msg.setWindowIcon(QIcon('icons/bombucha.png'))
+    question_msg.setWindowIcon(QIcon('images/icons/bombucha.png'))
     question_msg.setText(config.items_text['msg_not_all_important_params_text'])
 
     question_msg.setFont(config.mainfont)
@@ -28,7 +28,7 @@ def show_msg_not_all_important_params():
 def show_msg_wrong_input():
     msg = QtWidgets.QMessageBox()
     msg.setIcon(QtWidgets.QMessageBox.Information)
-    msg.setWindowIcon(QIcon('icons/bombucha.png'))
+    msg.setWindowIcon(QIcon('images/icons/bombucha.png'))
     msg.setWindowTitle(config.items_text['msg_wrong_input_window_title'])
     msg.setText(config.items_text['msg_wrong_input_text'])
     msg.setFont(config.mainfont)
@@ -39,8 +39,8 @@ def show_msg_wrong_input():
 
 def show_msg_exelsaved():
     msg = QtWidgets.QMessageBox()
-    msg.setIconPixmap(QPixmap('icons/symbol_ok.png'))
-    msg.setWindowIcon(QIcon('icons/bombucha.png'))
+    msg.setIconPixmap(QPixmap('images/icons/symbol_ok.png'))
+    msg.setWindowIcon(QIcon('images/icons/bombucha.png'))
     msg.setWindowTitle(config.items_text['msg_exelsaved_window_title'])
     msg.setText(config.items_text['msg_exelsaved_text'])
     msg.setFont(config.bigfont)
