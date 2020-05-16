@@ -1,4 +1,11 @@
-![first release](https://img.shields.io/badge/release-v1.0-brightgreen.svg#alignright "")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png" 
+  title="Download button is highlighted" alt="Download_ZIP_image" width="600" height="369"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/release-v1.0-brightgreen.svg" alt="first release"/>
+</p>
 
 ## About Grillz calculator
 **Grillz calculator** is a program for calculation and 
