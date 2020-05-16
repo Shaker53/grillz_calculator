@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png" 
-  title="Download button is highlighted" alt="Download_ZIP_image" width="600" height="369"/>
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/bombucha.png" 
+  title="Download button is highlighted" alt="Download_ZIP_image" width="200" height="194"/>
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@ Unzip downloaded archive, go to extracted folder and
 run setup.py via python
 <p align="center">
   <img src="https://raw.githubusercontent.com/Shaker53/grillz_calcuator/release-1.0/images/demo/ZIP.png" 
-  title="Download button is highlighted" alt="Download_ZIP_image" width="600" height="369"/>
+  title="Download button is highlighted" alt="Download_ZIP_image" width="600" height="304"/>
 </p>
 
 ```
