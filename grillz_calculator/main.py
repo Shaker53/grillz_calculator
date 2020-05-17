@@ -1,6 +1,6 @@
 from ui.messages import show_msg_exelsaved, show_msg_wrong_input, show_msg_not_all_important_params
 from .business_logic import calculate_income_and_expenses
-from ui.config import table_on_page
+from config.ui_config import table_on_page
 from ui.forms import Window
 from exel import xls_export
 

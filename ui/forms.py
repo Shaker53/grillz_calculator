@@ -1,60 +1,60 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt, QDate
 from PyQt5.QtGui import QIcon
-from ui import config
+from config import ui_config
 
 
 class Label(QtWidgets.QLabel):
     def __init__(self, name, layout):
-        super().__init__(config.items_text[name])
-        self.setFont(config.mainfont)
+        super().__init__(ui_config.items_text[name])
+        self.setFont(ui_config.mainfont)
         self.setAlignment(Qt.AlignBottom | Qt.AlignHCenter)
-        layout.addWidget(self, *config.items_coordinates[name])
+        layout.addWidget(self, *ui_config.items_coordinates[name])
 
 
 class LineInput(QtWidgets.QLineEdit):
     def __init__(self, name, layout):
         super().__init__()
-        self.setFont(config.mainfont)
-        layout.addWidget(self, *config.items_coordinates[name])
+        self.setFont(ui_config.mainfont)
+        layout.addWidget(self, *ui_config.items_coordinates[name])
 
 
 class Spacer(QtWidgets.QSpacerItem):
     def __init__(self, name, layout):
-        super().__init__(*config.items_geometry['spacers'])
-        layout.addItem(self, *config.items_coordinates[name])
+        super().__init__(*ui_config.items_geometry['spacers'])
+        layout.addItem(self, *ui_config.items_coordinates[name])
 
 
 class DateInput(QtWidgets.QDateEdit):
     def __init__(self, name, layout):
         super().__init__()
-        self.setFont(config.mainfont)
+        self.setFont(ui_config.mainfont)
         self.setCalendarPopup(True)
         self.setDate(QDate.currentDate())
-        layout.addWidget(self, *config.items_coordinates[name])
+        layout.addWidget(self, *ui_config.items_coordinates[name])
 
 
 class CheckBox(QtWidgets.QCheckBox):
     def __init__(self, name, layout):
-        super().__init__(config.items_text[name])
-        self.setFont(config.mainfont)
-        layout.addWidget(self, *config.items_coordinates[name])
+        super().__init__(ui_config.items_text[name])
+        self.setFont(ui_config.mainfont)
+        layout.addWidget(self, *ui_config.items_coordinates[name])
 
 
 class ComboBox(QtWidgets.QComboBox):
     def __init__(self, name, layout):
         super().__init__()
-        self.setFont(config.mainfont)
-        for i in range(config.items_text[name][0]):
-            self.addItem(config.items_text[name][i + 1])
-        layout.addWidget(self, *config.items_coordinates[name])
+        self.setFont(ui_config.mainfont)
+        for i in range(ui_config.items_text[name][0]):
+            self.addItem(ui_config.items_text[name][i + 1])
+        layout.addWidget(self, *ui_config.items_coordinates[name])
 
 
 class Button(QtWidgets.QPushButton):
     def __init__(self, name, placement):
-        super().__init__(config.items_text[name], placement)
-        self.setGeometry(config.items_geometry[name])
-        self.setFont(config.mainfont)
+        super().__init__(ui_config.items_text[name], placement)
+        self.setGeometry(ui_config.items_geometry[name])
+        self.setFont(ui_config.mainfont)
 
 
 class Window(QtWidgets.QMainWindow):
@@ -97,31 +97,31 @@ def centralize(ui):
 
 def build_window(ui, window):
     ui.window = window
-    ui.window.setWindowTitle(config.window_title)
-    ui.window.setMinimumSize(config.items_geometry['window'])
-    ui.window.setMaximumSize(config.items_geometry['window'])
+    ui.window.setWindowTitle(ui_config.window_title)
+    ui.window.setMinimumSize(ui_config.items_geometry['window'])
+    ui.window.setMaximumSize(ui_config.items_geometry['window'])
     build_centralWidget(ui)
 
 
 def build_centralWidget(ui):
     ui.centralWidget = QtWidgets.QWidget(ui.window)
-    ui.centralWidget.setMinimumSize(config.items_geometry['window'])
-    ui.centralWidget.setMaximumSize(config.items_geometry['window'])
-    ui.centralWidget.setStyleSheet(config.colors['centralWidget'])
+    ui.centralWidget.setMinimumSize(ui_config.items_geometry['window'])
+    ui.centralWidget.setMaximumSize(ui_config.items_geometry['window'])
+    ui.centralWidget.setStyleSheet(ui_config.colors['centralWidget'])
     ui.window.setCentralWidget(ui.centralWidget)
     build_stackedWidget(ui)
 
 
 def build_stackedWidget(ui):
     ui.stackedWidget = QtWidgets.QStackedWidget(ui.centralWidget)
-    ui.stackedWidget.setGeometry(config.items_geometry['stackedWidget'])
+    ui.stackedWidget.setGeometry(ui_config.items_geometry['stackedWidget'])
 
 
 def build_page_with_inputs(ui):
     ui.page1 = QtWidgets.QWidget()
     ui.stackedWidget.addWidget(ui.page1)
     ui.layoutWidget = QtWidgets.QWidget(ui.page1)
-    ui.layoutWidget.setGeometry(config.items_geometry['layoutWidget'])
+    ui.layoutWidget.setGeometry(ui_config.items_geometry['layoutWidget'])
     ui.gridLayout = QtWidgets.QGridLayout(ui.layoutWidget)
 
     ui.spacer1 = Spacer('spacer1', ui.gridLayout)
@@ -131,7 +131,7 @@ def build_page_with_inputs(ui):
     ui.spacer5 = Spacer('spacer5', ui.gridLayout)
 
     ui.button_calculate = Button('button_calculate', placement=ui.page1)
-    ui.gridLayout.addWidget(ui.button_calculate, *config.items_coordinates['button_calculate'])
+    ui.gridLayout.addWidget(ui.button_calculate, *ui_config.items_coordinates['button_calculate'])
 
     build_all_input_fields(ui)
 
@@ -166,7 +166,7 @@ def build_all_input_fields(ui):
 
 def build_page_with_table(ui):
     ui.page2 = QtWidgets.QWidget()
-    ui.page2.setMinimumSize(config.items_geometry['page_2'])
+    ui.page2.setMinimumSize(ui_config.items_geometry['page_2'])
     ui.stackedWidget.addWidget(ui.page2)
 
     ui.button_return = Button('button_return', placement=ui.page2)
@@ -176,11 +176,11 @@ def build_page_with_table(ui):
 
 def build_table_frame(ui):
     ui.tableWidget = QtWidgets.QTableWidget(ui.page2)
-    ui.tableWidget.setGeometry(config.items_geometry['tableWidget'])
-    ui.tableWidget.setRowCount(config.table_rows)
-    ui.tableWidget.setColumnCount(config.table_columns)
+    ui.tableWidget.setGeometry(ui_config.items_geometry['tableWidget'])
+    ui.tableWidget.setRowCount(ui_config.table_rows)
+    ui.tableWidget.setColumnCount(ui_config.table_columns)
 
     ui.tableWidget.horizontalHeader().setVisible(False)
-    ui.tableWidget.horizontalHeader().setDefaultSectionSize(config.items_geometry['table_items_width'])
+    ui.tableWidget.horizontalHeader().setDefaultSectionSize(ui_config.items_geometry['table_items_width'])
     ui.tableWidget.verticalHeader().setVisible(False)
-    ui.tableWidget.verticalHeader().setDefaultSectionSize(config.items_geometry['table_items_height'])
+    ui.tableWidget.verticalHeader().setDefaultSectionSize(ui_config.items_geometry['table_items_height'])

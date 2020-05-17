@@ -1,6 +1,6 @@
 from xlrd import open_workbook
 from xlwt import Workbook
-from exel import config
+from config import exel_config
 
 
 def save_order(all_params):
@@ -20,7 +20,7 @@ def save_order(all_params):
         wb = Workbook()
         worksheet = wb.add_sheet('zakazy')
         col_number = 0
-        for label in config.table_labels:
+        for label in exel_config.table_labels:
             worksheet.write(0, col_number, label)
             col_number += 1
         wb.save('zakazy.xls')
@@ -43,6 +43,6 @@ def save_order(all_params):
             col_number__ += 1
         row_number__ += 1
 
-    for number_of_wide_col in config.numbers_of_wide_cols:
+    for number_of_wide_col in exel_config.numbers_of_wide_cols:
         worksheet.col(number_of_wide_col).width = 256 * 20
     wb.save('zakazy.xls')
