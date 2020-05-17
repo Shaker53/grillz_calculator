@@ -65,7 +65,7 @@ class Window(QtWidgets.QMainWindow):
     def setup_ui(self, window):
         build_window(self, window)
         centralize(self)
-        self.setWindowIcon(QIcon('images/icons/bombucha.png'))
+        self.setWindowIcon(QIcon('resources/images/icons/bombucha.png'))
         build_page_with_inputs(self)
         build_page_with_table(self)
         set_button_actions(self)

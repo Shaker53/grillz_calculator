@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/bombucha.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/bombucha.png" 
   title="Download button is highlighted" alt="Download_ZIP_image" width="200" height="194"/>
 </p>
 
@@ -42,7 +42,7 @@ On GitHub click "Clone or download" and then "Download ZIP".
 Unzip downloaded archive, go to extracted folder and
 run setup.py via python
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/ZIP.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/ZIP.png" 
   title="Download button is highlighted" alt="Download_ZIP_image" width="600" height="304"/>
 </p>
 
@@ -59,14 +59,14 @@ python3 setup.py
 1.  Enter all order information and press **"Calculate"**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/calculate.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/calculate.png" 
   title="Calculate button is highlighted" alt="Calculate_button_image" width="600" height="369"/>
 </p>
 
 2.  Check all the costs and income
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/check.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/check.png" 
   title="You can see most of all order details" alt="Check_image" width="600" height="369"/>
 </p>
 
@@ -75,12 +75,12 @@ program will create .xls file in the root directory of the
 project and will put all the information into it
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/save.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/save.png" 
   title="Save button is highlighted" alt="Save_button_image" width="600" height="369"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/save_ok.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/save_ok.png" 
   title="When order is saved, you will see a notification" alt="Save_ok_image" width="600" height="369"/>
 </p>
 
@@ -88,12 +88,12 @@ project and will put all the information into it
 (Microsoft Excel, LibreOffice, OpenOffice, etc.)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/xls1.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/xls1.png" 
   title="You can use it like any other Exel table" alt="xls_image_1" width="600" height="369"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/xls2.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/xls2.png" 
   title="You can use it like any other Exel table" alt="xls_image_2" width="600" height="369"/>
 </p>
 
@@ -102,7 +102,7 @@ the same file (will not create another one), on a new
 string
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/xls_another.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/xls_another.png" 
   title="New order - new string" alt="xls_another_order_image" width="600" height="369"/>
 </p>
 
@@ -117,7 +117,7 @@ or make a mistake(e.g. use letters where numbers
 were expected), program will notify you about it
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/wrong.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/wrong.png" 
   title="Try again and press 'Calculate'" alt="Wrong_input_image" width="600" height="369"/>
 </p>
 
@@ -125,7 +125,7 @@ were expected), program will notify you about it
 and do it
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/images/demo/back.png" 
+  <img src="https://raw.githubusercontent.com/Shaker53/grillz_calculator/release-1.0/resources/images/demo/back.png" 
   title="Back button is highlighted" alt="Back_button_image" width="600" height="369"/>
 </p>
 
