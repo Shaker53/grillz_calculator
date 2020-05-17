@@ -16,15 +16,25 @@ grillz-making dentistry companies.
 
 ## Requirements
 
-To run this program, you need to be installed on your PC:
-  - Python 3
-  - PyQt5
+To run this program in easy way, you need to be installed on your PC*:
+  - Python 3 ([Mac OS](https://docs.python-guide.org/starting/install3/osx) / 
+              [Linux](https://opensource.com/article/20/4/install-python-linux))
+  - pip ([For all operating systems](https://pip.pypa.io/en/stable/installing))
+  - xlwt**
+  - xlrt**
+  - PyQt5**
+
+\* If you want to install **Grillz calculator** on **Windows**, 
+please go to the [another repository](https://github.com/Shaker53/grillz_calculator_for_windows).
+
+\** To install all additional packages in easy way, see instructions below, 
+in **Installation and quick start** part.
 
 ## Installation and quick start
 
 #### First method
 Use "git clone" to copy repository to your PC and then 
-in the project directory run setup.py via python
+in the project directory run setup.py via python.
 
 ```
 # Makes your own copy of repository
@@ -33,9 +43,13 @@ git clone https://github.com/Shaker53/grillz_calculator.git
 # Goes to the project directory. Plese put the directory path instead "..." !
 cd .../grillz_calculator
 
+# Install all additional libraries that are needed to run this program*
+pip install -r requirements.txt
+
 # Runs the program
 python3 setup.py
 ```
+\* In case of ```pip``` doesn't work, use ```pip3``` instead.
 
 #### Second method
 On GitHub click "Clone or download" and then "Download ZIP".
@@ -50,9 +64,13 @@ run setup.py via python
 # Goes to the project directory. Plese put the directory path instead "..." !
 cd .../grillz_calculator
 
+# Install all additional libraries that are needed to run this program*
+pip install -r requirements.txt
+
 # Runs the program
 python3 setup.py
 ```
+\* In case of ```pip``` doesn't work, use ```pip3``` instead.
 
 ## How to use
 
