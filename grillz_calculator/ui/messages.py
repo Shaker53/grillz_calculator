@@ -20,9 +20,9 @@ def show_msg_not_all_important_params():
     button_no.setFont(ui_config.littlefont)
     question_msg.exec()
     if question_msg.clickedButton() == button_ok:
-        return 'back_button_pushed'
+        return True
     else:
-        return 'forward'
+        return False
 
 
 def show_msg_wrong_input():
