@@ -36,7 +36,6 @@ def open_file_or_create_it():
             col_number += 1
         workbook.save('zakazy.xls')
         file = open_workbook('zakazy.xls', formatting_info=True)
-        # sheet = file.sheet_by_index(0)
     return file
 
 

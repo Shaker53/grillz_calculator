@@ -1,15 +1,8 @@
-from typing import List, Any, Union
-
 from grillz_calculator.ui import messages
 from .money_flow_calculator import CalculationResult, calculate_income_and_expenses
 from config import ui_config
 from grillz_calculator.ui import forms
 from grillz_calculator.exel import xls_export
-
-# ONLY_NUMERAL_INPUTS_INDEXES = [1, 4, 5, 6, 9, 10, 11]
-# IMPORTANT_INPUTS_INDEXES = [0, 1, 4, 9]
-# ALL_INPUTS_EXCEPT_CLIENT_NAME_INDEXES = range(1, 12)
-# JAWS_INPUT_INDEX = 7
 
 
 class ClientParams:
