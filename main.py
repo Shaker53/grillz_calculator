@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 from sys import argv
-from grillz_calculator.main import GrillzApp
+from grillz_calculator.grillz_app import GrillzApp
 
 
 def main():

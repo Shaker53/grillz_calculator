@@ -1,8 +1,8 @@
-from ui.messages import show_msg_exelsaved, show_msg_wrong_input, show_msg_not_all_important_params
-from .business_logic import calculate_income_and_expenses
-from config.ui_config import table_on_page
-from ui.forms import Window
-from exel import xls_export
+from grillz_calculator.ui import messages
+from .money_flow_calculator import calculate_income_and_expenses
+from config import ui_config
+from grillz_calculator.ui import forms
+from grillz_calculator.exel import xls_export
 
 ONLY_NUMERAL_INPUTS_INDEXES = [1, 4, 5, 6, 9, 10, 11]
 IMPORTANT_INPUTS_INDEXES = [0, 1, 4, 9]
@@ -10,7 +10,7 @@ ALL_INPUTS_EXCEPT_CLIENT_NAME_INDEXES = range(1, 12)
 JAWS_INPUT_INDEX = 7
 
 
-class GrillzApp(Window):
+class GrillzApp(forms.Window):
     def __init__(self):
         super().__init__()
         self.button_calculate.clicked.connect(self.click_on_calculate_button)
@@ -21,23 +21,23 @@ class GrillzApp(Window):
         result_of_check = checking_inputs(inputs)
 
         if result_of_check == 'wrong_input':
-            show_msg_wrong_input()
+            messages.show_msg_wrong_input()
             return
         elif result_of_check == 'not_all_important_params':
-            msg_answer = show_msg_not_all_important_params()
+            msg_answer = messages.show_msg_not_all_important_params()
             if msg_answer == 'back_button_pushed':
                 return
 
         inputs = prepare_inputs(inputs)
         income_and_expenses = calculate_income_and_expenses(inputs)
         self.all_params = [inputs, income_and_expenses]
-        table_on_page(self.all_params, self.tableWidget)
+        ui_config.table_on_page(self.all_params, self.tableWidget)
         self.stackedWidget.setCurrentIndex(1)
 
     def click_on_save_button(self):
         xls_export.save_order(self.all_params)
         self.button_save.setEnabled(False)
-        show_msg_exelsaved()
+        messages.show_msg_exelsaved()
 
 
 def reading_inputs(self):
