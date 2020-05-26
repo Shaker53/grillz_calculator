@@ -125,7 +125,7 @@ def check_got_all_important_params(client_params, money_params):
         client_params.client_name, client_params.n_of_order,
         money_params.order_sum, money_params.n_of_teeth
     ]
-    if any(parameter for parameter in important_params) == '':
+    if any(parameter == '' for parameter in important_params):
         return False
     else:
         return True
