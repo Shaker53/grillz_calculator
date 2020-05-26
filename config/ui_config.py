@@ -17,7 +17,7 @@ bigfont = Font(14)
 mainfont = Font()
 littlefont = Font(11)
 
-window_title = QCoreApplication.translate('window', 'GRILLZ CALCULATOR')
+window_title = QCoreApplication.translate('window', 'GRILLZ CALCULATOR v1.0')
 
 table_rows = 10
 table_columns = 5
