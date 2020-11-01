@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+
 JAW_PRICE = 10
 TOOTH_PRICE = 4
 SPRAYING_PRICE = 3
@@ -6,21 +9,17 @@ ANTON_SHARE = 0.35
 KOSTYA_SHARE = 0.35
 
 
+@dataclass
 class CalculationResult:
-    def __init__(
-            self, second_payment, jaws_sum, n_of_teeth_sum, spraying_sum,
-            materials, income, common_bank, anton, kostya
-    ):
-
-        self.second_payment = second_payment
-        self.jaws_sum = jaws_sum
-        self.n_of_teeth_sum = n_of_teeth_sum
-        self.spraying_sum = spraying_sum
-        self.materials = materials
-        self.income = income
-        self.common_bank = common_bank
-        self.anton = anton
-        self.kostya = kostya
+    second_payment: float
+    jaws_sum: float
+    n_of_teeth_sum: float
+    spraying_sum: float
+    materials: float
+    income: float
+    common_bank: float
+    anton: float
+    kostya: float
 
 
 def calculate_income_and_expenses(money_params_prepared):
