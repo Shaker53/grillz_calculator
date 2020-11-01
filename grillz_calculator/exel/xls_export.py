@@ -4,14 +4,21 @@ from config import exel_config
 
 
 def save_order(all_params):
+    client_params = all_params['client_params']
+    money_params_prepared = all_params['money_params_prepared']
+    calculation_result = all_params['calculation_result']
+
     new_table_row = [
-        all_params.n_of_order, all_params.client_name, all_params.start_date, all_params.maybe_finish_date,
-        float(all_params.order_sum), float(all_params.difficult_sum), float(all_params.add_costs),
-        all_params.income, all_params.common_bank, all_params.anton, all_params.kostya,
-        float(all_params.first_payment), all_params.second_payment, all_params.materials, all_params.jaws_text,
-        all_params.jaws_sum, float(all_params.n_of_teeth), all_params.n_of_teeth_sum,
-        float(all_params.spraying), all_params.spraying_sum
+        client_params.n_of_order, client_params.client_name, client_params.start_date,
+        client_params.maybe_finish_date, float(money_params_prepared.order_sum),
+        float(money_params_prepared.difficult_sum), float(money_params_prepared.add_costs),
+        calculation_result.income, calculation_result.common_bank, calculation_result.anton,
+        calculation_result.kostya, float(money_params_prepared.first_payment),
+        calculation_result.second_payment, calculation_result.materials, money_params_prepared.jaws_text,
+        calculation_result.jaws_sum, float(money_params_prepared.n_of_teeth), calculation_result.n_of_teeth_sum,
+        float(money_params_prepared.spraying), calculation_result.spraying_sum
     ]
+
     file = open_file_or_create_it()
     sheet = file.sheet_by_index(0)
 
