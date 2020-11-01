@@ -19,7 +19,7 @@ grillz-making dentistry companies.
 ## Requirements
 
 To run this program in easy way, you need to be installed on your PC*:
-  - Python 3 ([Mac OS](https://docs.python-guide.org/starting/install3/osx) / 
+  - Python 3.7 ([Mac OS](https://docs.python-guide.org/starting/install3/osx) / 
               [Linux](https://opensource.com/article/20/4/install-python-linux))
   - pip ([For all operating systems](https://pip.pypa.io/en/stable/installing))
   - xlwt**
@@ -150,7 +150,7 @@ and do it
 </p>
 
 ## Tools/Library Used
-  - Python 3
+  - Python 3.7
   - PyQt5 (Python binding of Qt)
   - xlwt (Python library for writing data to .xls files)
   - xlrt (Python library for reading data from .xls files)
