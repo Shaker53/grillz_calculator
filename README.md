@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/release-v1.0-brightgreen.svg" alt="first release"/>
+  <img src="https://img.shields.io/badge/release-v1.1-brightgreen.svg" alt="first release"/>
   <img src="https://camo.githubusercontent.com/e65c945b219ec6c6f63826a83df905b3191ae52c/68747470733a2f2f706f7365722e707567782e6f72672f6c61726176656c2f6672616d65776f726b2f6c6963656e73652e737667" 
   alt="license MIT"/>
 </p>
